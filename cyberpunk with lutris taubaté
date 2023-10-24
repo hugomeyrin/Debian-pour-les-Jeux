@@ -1,0 +1,27 @@
+debian 12 cyberpunk
+apt-get install gstreamer1-plugins-*
+
+lutris - options de l'éxecuteur 
+version Systéme (8.0(Debian 8.0~repack-4))
+DXVK active 
+v2.3
+VK3D
+v2.10
+Activer AMD FSR 
+
+
+OPTIONS SYSTÉME 
+Vulkan ICD loader 
+Unspecified:AMD RADEON RX 6400 
+
+OPTIONS DE JEUX 
+/home/hugo/Games/winecyber/drive_c/GOG Games/Cyberpunk 2077/bin/x64/Cyberpunk2077.exe
+
+CHEMIN DU PREFIX WINE 
+/home/hugo/Games/winecyber
+
+INFOS DE JEU 
+CYBERPUNK2077 
+
+EXECUTEUR
+WINE
