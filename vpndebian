@@ -1,0 +1,2 @@
+sudo apt-get -y install network-manager-openvpn
+sudo apt-get -y install network-manager-l2tp
