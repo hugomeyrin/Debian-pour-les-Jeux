@@ -1,0 +1,27 @@
+Summary
+
+Install packages for either a minimal (console-only), server, or desktop (choice of Openbox and/or Sway) system
+Optional:
+
+Auto-install security updates
+Setup zram for swap
+Customize GRUB
+Select different keyboard and console-font
+
+
+
+
+How does it work?
+Sync package repositories and install git:
+
+sudo apt update && sudo apt install git
+Download:
+
+git clone https://gitlab.com/dwarmstrong/debian-after-install.git
+Change directory and run script with your username as the sole argument:
+
+cd debian-after-install
+sudo ./debian_after_install.py <your_username>
+
+Author
+Daniel Wayne Armstrong
