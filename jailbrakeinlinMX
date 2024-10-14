@@ -1,0 +1,220 @@
+
+
+    same issue here
+
+        iPad Air A1475
+        IOS12.5.5
+        checkra1n 0.12.4
+        vm ubuntu with AMD based pc
+        USB-A original apple cable
+
+I had the same issue with the iPad Air A1474 (A7) with iOS 12.5.5 and found the solution here.
+here:
+For everyone who doesn't have a Mac machine or can't borrow from friends, I suggest you use ra1nusb instead: https://ra1nusb.thuthuatjb.com/
+There are 3 versions and you can try any of them. The basic idea is that it use a MacOS recovery image in USB to create a MacOS environment on non-MacOS machine. This way you can avoid the error which occurs on Linux.
+
+Remember ra1nusb is not really up-to-date with checkra1n (at this moment it supports up to 0.10). You might need to download and copy your specific version to the USB, and execute checkra1n from terminal.
+
+I have tried every checkra1n version on Ubuntu, Linux Mint, Manjaro and they all have the problem at Exploit Failed (Error code: -31). Then I tried ra1nusb and it finally worked.
+
+
+
+
+
+Try Ra1nUSB_HT to boot in to a macOS environment. I used balenaEtcher to install the dmg file in a 16GB USB drive. checkra1n 0.12.4 beta (enter 124 in Terminal) worked on the first try. I used the Intel version, there is an AMD version too.
+https://github.com/hoangtuantk/Ra1nUSB_HT/blob/main/README_en.md
+
+
+
+
+
+Ra1nUSB_HT
+
+Translated from Vietnamese to English with Google Translate. So the grammar may not be standard
+
+    This file Ra1nUSB_HT includes Checkra1n versions from 0.9 to 0.12.4
+    Website: jb.tuandb.name.vn
+    When there is a new version of Checkra1n and you do not want to recreate the installer, watch Video to manually add the new Checkra1n version.
+    Note (Add for video)
+        Download the checkra1n file for MacOS on the homepage checkra.in and then open it with 7-Zip to get the checkra1n.app file.
+        As for the command file, you copy your existing command file > open with Notepad,... then edit the path accordingly
+
+Ra1nUSB_HT
+Request
+
+    USB at least 4GB
+    Intel or AMD CPU computer
+
+    Case
+        Intel Core I, Xeon, Pentium, Celeron CPUs can all be installed.
+        For Pentium and Celeron series will need to FakeCPUID to Core I respectively.
+
+    Laptop and synchronous computer
+        CPU Intel Core I
+
+Setting
+
+    Use balenaEtcher or Transmac software to create USB Boot (Using balenaEtcher will be much faster than Transmac)
+
+    Go to BIOS and Disable Secure boot, SATA Mode:AHCI
+
+    Intel version: Fixed when booting Legacy. Priority boot UEFI if the device has
+
+    AMD version: Can only boot UEFI
+
+    UEFI boot has Options and Legacy will not have (Ra1nUSB_HT file, any standard boot will output UEFI)
+
+    UEFI vs Legacy
+
+Note
+
+    Checkra1n only supports from iPhone 5s (Chip A7) to iPhone X (Chip A11)
+    iOS 14.5 > 14.8.1 use Checkra1n from 0.12.3 and above
+    iOS 14.0 > 14.4.2 use Checkra1n from 0.11.0 and above
+    iOS 13.4 > 13.7 use Checkra1n from 0.9.9 and above
+    iOS 12.3 > 13.3.1 use Checkra1n from 0.9.2 and above
+
+Link Download
+🔗 Download Ra1nUSB_HT
+Donate
+If you want to support, you can buy me a coffee at: tuandb.name.vn/donate
+Type commands in Terminal
+Normal mode white checkra1n board
+
+    enter 09 -> Checkra1n 0.9
+
+    enter 091 -> Checkra1n 0.9.1
+
+    enter 092 -> Checkra1n 0.9.2
+
+    enter 093 -> Checkra1n 0.9.3
+
+    enter 0932 -> Checkra1n 0.9.3.2
+
+    enter 095 -> Checkra1n 0.9.5
+
+    enter 096 -> Checkra1n 0.9.6
+
+    enter 097 -> Checkra1n 0.9.7
+
+    enter 098 -> Checkra1n 0.9.8
+
+    enter 0981 -> Checkra1n 0.9.8.1
+
+    enter 0982 -> Checkra1n 0.9.8.2
+
+    enter 099 -> Checkra1n 0.9.9
+
+    enter 100 -> Checkra1n 0.10.0
+
+    enter 101 -> Checkra1n 0.10.1
+
+    enter 102 -> Checkra1n 0.10.2
+
+    enter 110 -> Checkra1n 0.11.0
+
+    enter 120 -> Checkra1n 0.12.0
+
+    enter 121 -> Checkra1n 0.12.1
+
+    enter 122 -> Checkra1n 0.12.2
+
+    enter 123 -> Checkra1n 0.12.3
+
+    enter 124 -> Checkra1n 0.12.4
+
+    enter fix20 -> minaUSB V1.1 (Used to fix error -20 when JailBreak)
+
+    enter purple -> purple pro
+    Does not support related issues bypass and (mina USB V1.1, purple pro)
+
+cli mode (DFU standby - all checkra1n have it)
+
+        Add -cli after: Example: 097-cli , 122-cli , ...
+
+    Default
+
+    Note
+
+    When the word Waiting for DFU devices is displayed, you must manually return the device to DFU
+    In DFU mode, the screen will not show anything (black screen) - Recovery Mode will appear as shown
+
+    Black checkra1n board mode (keyboard can be used to move - only from checkra1n 0.9.8)
+
+        Add d after: Example: 098d, 122d , ...
+
+    -cli
+
+How to Fix Some Errors (Error title with video link assigned)
+
+    Fix error when clicking Start (The machine does not automatically enter Recovery Mode)
+
+    On your phone go to General > Reset > Reset Privacy and Location > Reconnect phone to PC and click Trust
+
+    If not, you have to manually put the device into Recovery Mode
+
+-How to enter Recovery Mode for those of you who don't know-
+
+a. iPhone 5s, 6, 6 Plus, 6s, 6s Plus
+
+    Plug in the cable to connect to the PC
+    Hold down the power and home buttons at the same time until the apple logo appears
+    Release the power key but keep holding the home key until the device enters Recovery Mode
+
+b. iPhone 7, 7 Plus
+
+    Plug in the cable to connect to the PC
+    Hold the power button and volume down at the same time until the apple logo appears
+    Release the power key but keep holding the volume down key until the device enters Recovery Mode
+
+c. iPhone 8, 8 Plus, X
+
+    Plug in the cable to connect to the PC
+    Press volume up (Quick press)
+    Press volume down (Quick press)
+    Hold down the power key until the device enters Recovery Mode
+
+    Fix Error code: -20(The video may be out of date for the time being)
+
+    -20
+
+        Put the device into Diagnostic mode
+
+        Open minaUSB (by typing fix20 on terminal) and then act like picture
+
+        1
+
+        2
+
+    Open Etcher, nothing shows up
+
+    Error hangs when showing 2 lines)
+
+    CPU Pentium, Celeron
+
+    Error when booting Legacy (for Ra1nUSB_HT version, it is already fixed) Code: 1 , AHCI...
+
+    1
+
+    2
+
+    Error only showing dash when booting
+
+    How to fix:
+
+    Try the methods below with the correct version of Ra1nUSB for the CPU you are using first, and then try again with the version of the other CPU.
+        Change the Ram slot if you are plugging in 1 stick. (preferably plugged into slot 1)
+        Remove the Ram and try again if there are many bars (preference is given to slot 1)
+
+    If the error persists, do the following:
+        Open the BOOT partition of the 200MB USB and then go to the following path BOOT_HT\EFI\ CLOVER\drivers\UEFI and replace file AptioMemoryFix.efi (delete or move the AptioMemoryFix.efi file somewhere else) by file OsxAptioFixDrv.efi or OsxAptioFix2Drv-free2000.efi
+
+Not all machines can be fixed this way. I have been able to fix it with some cases and most of them are due to the error in the Ram slot
+
+- This error will also occur for cases
+
+    Machine configuration not supported
+    The config file is not suitable for your device (You must search for the appropriate config file in groups and forums about hackintosh)
+    Not calibrated BIOS
+
+Thank you for using
