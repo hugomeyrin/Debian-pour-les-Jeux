@@ -1,0 +1,8 @@
+hugo@debian:~$ sudo nano /etc/environment
+[sudo] Mot de passe de hugo : 
+VKD3D_CONFIG=dxr
+RADV_PERFTEST=rt,sam,nggc,ext_ms
+RADV_FORCE_VRS=1X1
+hugo@debian:~$ 
+
+
